@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Desktop animation - slower for better readability */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobile animation - faster to prevent long wait times */
+@keyframes scroll-mobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply different animation speeds based on screen size */
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.animate-scroll-mobile {
+  animation: scroll-mobile 25s linear infinite;
+}
+
+/* Responsive animation adjustments */
+@media (min-width: 640px) {
+  .animate-scroll-mobile {
+    animation: scroll 35s linear infinite;
+  }
+}
+
+@media (min-width: 1024px) {
+  .animate-scroll-mobile {
+    animation: scroll 40s linear infinite;
+  }
+}
+
+/* Pause animation on hover for better UX */
+.animate-scroll:hover,
+.animate-scroll-mobile:hover {
+  animation-play-state: paused;
+}
