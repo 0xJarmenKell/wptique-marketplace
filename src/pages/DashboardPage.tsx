@@ -19,9 +19,9 @@ import {
   useDashboardStats,
   useUserProducts,
   useUserOrders,
-  useDeleteProduct,
   useAllUsers,
 } from "../hooks/useDashboard";
+import { useDeleteProduct } from "../hooks/useProducts";
 
 const DashboardPage: React.FC = () => {
   const { user } = useAuth();

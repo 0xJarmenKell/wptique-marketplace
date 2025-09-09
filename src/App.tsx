@@ -10,7 +10,7 @@ import DashboardPage from "./pages/DashboardPage";
 import CreateProductPage from "./pages/CreateProductPage";
 import EditProductPage from "./pages/EditProductPage";
 import CreateBlogPostPage from "./pages/CreateBlogPostPage";
-import SubscriptionPlansPage from "./pages/SubscriptionPlansPage";
+// import SubscriptionPlansPage from "./pages/SubscriptionPlansPage";
 import SubscriptionCheckoutPage from "./pages/SubscriptionCheckoutPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
@@ -59,10 +59,10 @@ function App() {
                   />
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/checkout" element={<CheckoutPage />} />
-                  <Route
+                  {/* <Route
                     path="/subscription-plans"
                     element={<SubscriptionPlansPage />}
-                  />
+                  /> */}
                   <Route
                     path="/subscription-checkout/:planId"
                     element={<SubscriptionCheckoutPage />}

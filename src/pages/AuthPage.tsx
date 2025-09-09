@@ -24,13 +24,14 @@ const AuthPage: React.FC = () => {
         await login(formData.email, formData.password);
       } else {
         if (formData.password !== formData.confirmPassword) {
-          throw new Error('Passwords do not match');
+          throw new Error("Passwords do not match");
         }
         await register(formData.name, formData.email, formData.password);
       }
-      // Redirect will be handled by auth context
+      // On successful login/register, navigation is handled by the AuthContext listener
     } catch (error) {
-      console.error('Auth error:', error);
+      console.error("Auth error:", error);
+      // Optionally, show an error message to the user
     } finally {
       setLoading(false);
     }

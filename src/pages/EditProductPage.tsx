@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Upload, X, Save } from "lucide-react";
 import { useAuth } from "../contexts/AuthContext";
-import { useCreateProduct, useUpdateProduct } from "../hooks/useDashboard";
+import { useCreateProduct, useUpdateProduct } from "../hooks/useProducts";
 import { Product } from "../types";
 
 const EditProductPage: React.FC = () => {
